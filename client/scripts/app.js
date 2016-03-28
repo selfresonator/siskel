@@ -24,16 +24,15 @@ var Movies = Backbone.Collection.extend({
   },
 
   comparator: 'title',
+  
   sortByField: function(field) {
     if (field === this.comparator){
-          this.sort(this.get('comparator'));
-        } else {
-          this.comparator = field;
-          //this.set('comparator', field);
-          // console.log('this.comparator',this.comparator)
-          //console.log('comparator', this.get('comparator'));
-          this.sort(this.get('comparator'));
-        }  },
+        this.sort(this.get('comparator'));
+      } else {
+        this.comparator = field;
+        this.sort(this.get('comparator'));
+      }
+    }
 
 });
 
