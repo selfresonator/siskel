@@ -26,13 +26,13 @@ describe('Siskel', function() {
     Movies.prototype.sort.restore();
   });
 
-  xdescribe('Movie model like property', function() {
+  describe('Movie model like property', function() {
 
-    xit('should start out true', function() {
+    it('should start out true', function() {
       expect(model.get('like')).to.be.true;
     });
 
-    xit('should toggle its state', function() {
+    it('should toggle its state', function() {
       model.toggleLike();
       expect(model.get('like')).to.be.false;
     });
